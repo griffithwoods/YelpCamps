@@ -15,12 +15,13 @@ var seedDB = require("./seeds");
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes= require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
 
 //console.log(process.env.DATABASEURL);
 
 //mongodb://yinghao:ytmf7715@ds015879.mlab.com:15879/yelpcamp
 
-mongoose.connect(process.env.DATABASEURL,{ useNewUrlParser: true });
+mongoose.connect(url,{ useNewUrlParser: true });
 
 // mongoose.connect("mongodb://yinghao:ytmf7715@ds015879.mlab.com:15879/yelpcamp",{ useNewUrlParser: true });
 
